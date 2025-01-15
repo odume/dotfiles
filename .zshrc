@@ -42,11 +42,9 @@ zinit light Aloxaf/fzf-tab
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Aliases
-alias ls='ls --color'
-alias ll='ls -l'
-alias apia="cd ~/Projects/bpc-infrastructure/ && ./bin/exec-api php artisan"
-alias apic="cd ~/Projects/bpc-infrastructure/ && ./bin/exec-api composer"
-alias clin="cd ~/Projects/bpc-infrastructure/ && ./bin/exec-client npm"
+ if [[ -r ~/.aliasrc ]]; then
+   . ~/.aliasrc
+ fi
 
 # Key bindings
 bindkey -e
